@@ -18,6 +18,17 @@
 * **CoreLocation** (Manejo de coordenadas `CLLocationCoordinate2D`).
 * **Foundation** (Protocolo `Codable` y `JSONEncoder`/`JSONDecoder` para serialización de datos).
 
+* ## Requisitos e Instalación
+
+* **Sistema Operativo:** macOS 14.0 o superior.
+* **IDE:** Xcode 15.0+ / 16.0.
+* **Plataforma:** Target de despliegue para iOS 17.0+.
+
+Para ejecutar estos proyectos localmente:
+1. Clona el repositorio: `git clone https://github.com/isaSanchez-png/FavPlace.git`
+2. Abre la carpeta del proyecto deseado en Xcode.
+3. Selecciona tu simulador de iOS preferido y presiona `⌘R` (Run).
+
 ---
 
 **FavPlace** is a native iOS application built with SwiftUI that allows users to interact with an intuitive map to save and manage their favorite locations. It leverages the modern MapKit framework for iOS 17+ and stores data locally.
@@ -37,3 +48,13 @@
 * **MapKit** (Map, MapReader, MapCameraPosition, Map annotations).
 * **CoreLocation** (Handling `CLLocationCoordinate2D` structures).
 * **Foundation** (`Codable` protocol along with `JSONEncoder`/`JSONDecoder` for data serialization).
+
+* ## Requirements & Setup
+* **OS:** macOS 14.0 or later.
+* **IDE:** Xcode 15.0+ / 16.0.
+* **Platform:** iOS 17.0+ deployment target.
+
+ To run these projects locally:
+1. Clone the repository: `git clone https://github.com/isaSanchez-png/FavPlace.git`
+2. Open the desired project folder in Xcode.
+3. Select your preferred iOS Simulator and press `⌘R` (Run).
