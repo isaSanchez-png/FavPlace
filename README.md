@@ -1,60 +1,173 @@
-# FavPlace
+# 📍 FavPlace
 
-**FavPlace** es una aplicación iOS nativa desarrollada en SwiftUI que permite a los usuarios interactuar con un mapa interactivo para guardar y gestionar sus lugares favoritos. Utiliza el framework moderno de MapKit para iOS 17+ y almacena la información de forma local.
+FavPlace es una aplicación nativa para iOS desarrollada con **SwiftUI** que permite guardar, organizar y gestionar ubicaciones personalizadas mediante un mapa interactivo basado en **MapKit**. Los usuarios pueden crear lugares, asignarles un nombre, marcarlos como favoritos y navegar entre ellos mediante animaciones fluidas de la cámara del mapa.
 
-## Características
-* **Mapa Interactivo:** Explora el mapa utilizando las APIs modernas de `MapKit` y `MapReader`.
-* **Guardado de Lugares:** Mantén presionado o toca cualquier coordenada en el mapa para abrir un diálogo personalizado que permite asignarle un nombre y marcarlo como favorito.
-* **Marcadores Personalizados (`Annotations`):** Los marcadores cambian de color dinámicamente en el mapa según el estado de favorito (Cian para favoritos, Negro para normales).
-* **Carrusel de Favoritos:** Una hoja inferior deslizante (`PresentationDetents`) muestra un carrusel horizontal con las ubicaciones guardadas.
-* **Cámara Animada:** Al seleccionar una tarjeta en la lista inferior, la cámara del mapa vuela suavemente hacia las coordenadas del lugar guardado.
-* **Persistencia Local:** Los lugares se guardan automáticamente en el dispositivo utilizando codificación `Codable` y `UserDefaults`.
+El objetivo principal de este proyecto fue profundizar mis conocimientos sobre el framework moderno de mapas de Apple, fortaleciendo el manejo del estado de aplicaciones, la persistencia local y el desarrollo de interfaces interactivas.
 
 ---
 
-## Tecnologías Utilizadas
-* **SwiftUI** (Arquitectura de vistas declarativa, Sheets nativos, Materiales translúcidos).
-* **MapKit** (Map, MapReader, MapCameraPosition, Map annotations).
-* **CoreLocation** (Manejo de coordenadas `CLLocationCoordinate2D`).
-* **Foundation** (Protocolo `Codable` y `JSONEncoder`/`JSONDecoder` para serialización de datos).
+# Características
 
-* ## Requisitos e Instalación
+- 🗺️ **Mapa interactivo**
+  - Explora el mapa utilizando las APIs modernas de MapKit y MapReader disponibles en iOS 17.
 
-* **Sistema Operativo:** macOS 14.0 o superior.
-* **IDE:** Xcode 15.0+ / 16.0.
-* **Plataforma:** Target de despliegue para iOS 17.0+.
+- 📍 **Guardado de ubicaciones**
+  - Permite crear ubicaciones personalizadas tocando cualquier punto del mapa y asignándoles un nombre.
 
-Para ejecutar estos proyectos localmente:
-1. Clona el repositorio: `git clone https://github.com/isaSanchez-png/FavPlace.git`
-2. Abre la carpeta del proyecto deseado en Xcode.
-3. Selecciona tu simulador de iOS preferido y presiona `⌘R` (Run).
+- ⭐ **Marcadores dinámicos**
+  - Diferencia visualmente las ubicaciones favoritas mediante anotaciones que cambian automáticamente su apariencia.
 
----
+- 🎠 **Carrusel de favoritos**
+  - Accede rápidamente a las ubicaciones guardadas mediante una hoja deslizante construida con PresentationDetents.
 
-**FavPlace** is a native iOS application built with SwiftUI that allows users to interact with an intuitive map to save and manage their favorite locations. It leverages the modern MapKit framework for iOS 17+ and stores data locally.
+- ✈️ **Cámara animada**
+  - Desplaza suavemente la cámara hacia la ubicación seleccionada para ofrecer una experiencia de navegación más intuitiva.
 
-## Features
-* **Interactive Map:** Explore the map utilizing modern `MapKit` and `MapReader` APIs.
-* **Save Locations:** Tap on any coordinate on the map to trigger a custom dialog to name the location and mark it as a favorite.
-* **Custom Markers (`Annotations`):** Map pins dynamically change color based on their favorite status (Cyan for favorites, Black for regular locations).
-* **Favorites Carousel:** A modern bottom sheet overlay (`PresentationDetents`) presents a horizontal scrollable list of all saved locations.
-* **Animated Camera Flyover:** Tapping any card in the list smoothly animates the map camera to center directly onto the saved location's coordinates.
-* **Local Persistence:** All locations are automatically synchronized and stored on the device using `Codable` serialization and `UserDefaults`.
+- 💾 **Persistencia local**
+  - Guarda automáticamente la información utilizando Codable y UserDefaults para conservar los datos entre sesiones.
 
 ---
 
-## Technologies Used
-* **SwiftUI** (Declarative view hierarchy, native bottom sheets, translucent materials).
-* **MapKit** (Map, MapReader, MapCameraPosition, Map annotations).
-* **CoreLocation** (Handling `CLLocationCoordinate2D` structures).
-* **Foundation** (`Codable` protocol along with `JSONEncoder`/`JSONDecoder` for data serialization).
+# Tecnologías
 
-* ## Requirements & Setup
-* **OS:** macOS 14.0 or later.
-* **IDE:** Xcode 15.0+ / 16.0.
-* **Platform:** iOS 17.0+ deployment target.
+- Swift 5
+- SwiftUI
+- MapKit
+- MapReader
+- CoreLocation
+- UserDefaults
+- Codable
+- JSONEncoder / JSONDecoder
 
- To run these projects locally:
-1. Clone the repository: `git clone https://github.com/isaSanchez-png/FavPlace.git`
-2. Open the desired project folder in Xcode.
-3. Select your preferred iOS Simulator and press `⌘R` (Run).
+---
+
+# Decisión técnica
+
+Elegí **UserDefaults** junto con **Codable** porque la aplicación únicamente almacena una pequeña cantidad de información estructurada. Esta solución proporciona una persistencia ligera, sencilla de implementar y adecuada para los requerimientos del proyecto sin añadir la complejidad de una base de datos.
+
+---
+
+# Mayor reto
+
+El mayor desafío fue sincronizar las interacciones del usuario con el mapa manteniendo una interfaz fluida. Coordinar las anotaciones, las animaciones de la cámara y las actualizaciones del estado en SwiftUI requirió una gestión cuidadosa para ofrecer una navegación natural y consistente.
+
+---
+
+# ¿Qué aprendí?
+
+Durante este proyecto fortalecí mis conocimientos en:
+
+- Desarrollo de aplicaciones basadas en mapas con MapKit.
+- Manejo del estado utilizando SwiftUI.
+- Uso de CoreLocation y coordenadas geográficas.
+- Persistencia local mediante Codable y UserDefaults.
+- Diseño de componentes reutilizables en SwiftUI.
+- Creación de experiencias de usuario más intuitivas mediante animaciones y navegación interactiva.
+
+---
+
+# Requisitos
+
+- macOS 14.0 o superior
+- Xcode 15.0+
+- iOS 17.0+
+
+---
+
+# Instalación
+
+Clona el repositorio:
+
+```bash
+git clone https://github.com/isaSanchez-png/FavPlace.git
+```
+
+Abre el proyecto en Xcode, selecciona un simulador de iOS y ejecuta la aplicación presionando **⌘R**.
+
+---
+
+# 📍 FavPlace
+
+FavPlace is a native iOS application built with **SwiftUI** that allows users to save, organize, and manage their favorite locations through an interactive map experience powered by **MapKit**. Users can create personalized locations, visualize them with custom map annotations, and quickly navigate between saved places using an animated map camera.
+
+The main objective of this project was to deepen my understanding of Apple's modern mapping framework while improving my knowledge of state management, local persistence, and interactive user interfaces.
+
+---
+
+# Features
+
+- 🗺️ **Interactive Map**
+  - Explore locations using the modern MapKit and MapReader APIs introduced in iOS 17.
+
+- 📍 **Save Custom Locations**
+  - Tap anywhere on the map to create a custom location, assign a name, and save it for future reference.
+
+- ⭐ **Dynamic Favorite Markers**
+  - Visually distinguish favorite locations through dynamic map annotations that automatically update their appearance.
+
+- 🎠 **Favorites Carousel**
+  - Browse saved locations through an interactive bottom sheet built with PresentationDetents.
+
+- ✈️ **Animated Camera Navigation**
+  - Smoothly animate the map camera to any selected location, improving navigation and user experience.
+
+- 💾 **Local Persistence**
+  - Store locations locally using Codable together with UserDefaults to preserve user information between sessions.
+
+---
+
+# Tech Stack
+
+- Swift 5
+- SwiftUI
+- MapKit
+- MapReader
+- CoreLocation
+- UserDefaults
+- Codable
+- JSONEncoder / JSONDecoder
+
+---
+
+# Technical Decision
+
+I chose **UserDefaults** together with **Codable** because the application stores a relatively small amount of structured data. This approach provides a lightweight persistence solution while keeping the implementation simple, maintainable, and appropriate for the project's requirements.
+
+---
+
+# Biggest Challenge
+
+The biggest challenge was synchronizing user interactions with the map while maintaining a responsive interface. Managing map annotations, camera animations, and SwiftUI state updates required careful coordination to ensure every interaction felt smooth and intuitive.
+
+---
+
+# What I Learned
+
+Through this project I strengthened my understanding of:
+
+- Building interactive map-based applications with MapKit.
+- Managing application state using SwiftUI.
+- Working with CoreLocation and geographic coordinates.
+- Persisting structured data using Codable and UserDefaults.
+- Designing reusable SwiftUI components.
+- Creating intuitive user experiences through animations and interactive navigation.
+
+---
+
+# Requirements
+
+- macOS 14.0 or later
+- Xcode 15.0+
+- iOS 17.0+
+
+---
+
+# Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/isaSanchez-png/FavPlace.git
+```
+
+Open the project in Xcode, select an iOS Simulator, and press **⌘R** to run the application.
